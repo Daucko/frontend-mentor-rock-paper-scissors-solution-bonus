@@ -7,11 +7,11 @@ var beats = {
 };
 var choices = ['scissors', 'paper', 'rock', 'lizard', 'spock'];
 var iconFor = {
-  scissors: '#icon-scissors',
-  paper: '#icon-paper',
-  rock: '#icon-rock',
-  lizard: '#icon-lizard',
-  spock: '#icon-spock',
+  scissors: 'images/icon-scissors.svg',
+  paper: 'images/icon-paper.svg',
+  rock: 'images/icon-rock.svg',
+  lizard: 'images/icon-lizard.svg',
+  spock: 'images/icon-spock.svg',
 };
 
 var score = 0;
@@ -39,12 +39,13 @@ function setPickVisual(el, choice) {
     'spock',
     'revealed',
   );
-  var svg = el.querySelector('.inner svg');
-  svg.innerHTML = '';
+  var inner = el.querySelector('.inner');
+  inner.innerHTML = '';
   if (choice) {
-    var use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-    use.setAttribute('href', iconFor[choice]);
-    svg.appendChild(use);
+    var img = document.createElement('img');
+    img.src = iconFor[choice];
+    img.alt = '';
+    inner.appendChild(img);
     el.classList.add(choice);
   }
 }

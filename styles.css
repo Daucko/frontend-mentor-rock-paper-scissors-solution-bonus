@@ -131,12 +131,12 @@ main {
   width: min(100%, 330px);
   aspect-ratio: 1 / 1;
   margin: 80px auto 0;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .choices-wrap > img {
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* margin: 20px auto 0; */
 }
 
@@ -169,7 +169,7 @@ main {
   top: 0%;
 }
 .choice-node[data-choice='paper'] {
-  left: 100%;
+  left: 96%;
   top: 37%;
 }
 .choice-node[data-choice='rock'] {
@@ -181,7 +181,7 @@ main {
   top: 95%;
 }
 .choice-node[data-choice='spock'] {
-  left: 0%;
+  left: 2%;
   top: 37%;
 }
 
@@ -256,6 +256,20 @@ main {
   background: var(--spock);
 }
 
+.attribution {
+  position: static;
+  margin-top: 100px;
+  background-color: rgba(47, 255, 158, 0.614);
+  padding: 10px;
+  font-size: 1.1rem;
+  text-align: center;
+  text-shadow: 10px 10px 5px 5px rgba(140, 156, 194, 0.35);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 /* ---------- Result screen ---------- */
 .result-grid {
   display: grid;
@@ -278,6 +292,8 @@ main {
 .pick-col {
   grid-area: user;
   text-align: center;
+  border: 1px solid red;
+  margin-top: 30px;
 }
 .pick-col.house {
   grid-area: house;
@@ -285,18 +301,18 @@ main {
 
 .pick-label {
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: #c4cbe0;
+  color: var(--white);
   margin: 0 0 18px;
 }
 
 .pick-stage {
   position: relative;
-  width: clamp(110px, 24vw, 170px);
-  height: clamp(110px, 24vw, 170px);
-  margin: 0 auto;
+  width: clamp(110px, 24vw, 288px);
+  height: clamp(110px, 24vw, 288px);
+  margin: 62px auto 0;
 }
 
 .ring {
@@ -306,6 +322,7 @@ main {
   border: 2px solid rgba(255, 255, 255, 0.12);
   opacity: 0;
   transform: scale(0.6);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 .pick-stage.pulse .ring {
@@ -365,10 +382,9 @@ main {
   justify-content: center;
 }
 
-.pick-circle .inner svg {
-  width: 46%;
-  height: 46%;
-  fill: var(--icon-ink);
+.pick-circle .inner img {
+  width: 50%;
+  height: 50%;
 }
 
 .pick-circle.revealed::before {
@@ -546,7 +562,7 @@ main {
   font-size: 7px;
   fill: #b6bcca;
 }
-.rules-arrow-outer {
+/* .rules-arrow-outer {
   stroke: #b7bccb;
   stroke-width: 2;
   fill: none;
@@ -557,7 +573,7 @@ main {
   stroke-width: 1.4;
   fill: none;
   marker-end: url(#arrowheadInner);
-}
+} */
 
 @media (max-width: 480px) {
   .app {
