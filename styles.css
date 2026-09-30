@@ -168,18 +168,22 @@ main {
   left: 50%;
   top: 0%;
 }
+
 .choice-node[data-choice='paper'] {
   left: 96%;
   top: 37%;
 }
+
 .choice-node[data-choice='rock'] {
   left: 81%;
   top: 95%;
 }
+
 .choice-node[data-choice='lizard'] {
   left: 20%;
   top: 95%;
 }
+
 .choice-node[data-choice='spock'] {
   left: 2%;
   top: 37%;
@@ -614,7 +618,7 @@ main {
   /* ---------- Choice screen ---------- */
   .choices-wrap {
     position: relative;
-    width: min(100%, 200px);
+    width: min(100%, 210px);
     aspect-ratio: 460 / 380;
     margin: 120px auto 0;
     border: 1px solid red;
@@ -627,8 +631,8 @@ main {
   .choice-node {
     position: absolute;
     transform: translate(-50%, -50%);
-    width: clamp(84px, 40vw, 130px);
-    height: clamp(84px, 40vw, 130px);
+    width: clamp(84px, 40vw, 100px);
+    height: clamp(84px, 40vw, 100px);
     border: none;
     background: none;
     padding: 0;
@@ -637,16 +641,28 @@ main {
   }
 
   .choice-node[data-choice='paper'] {
-    left: 0%;
-    top: 0%;
-  }
-  .choice-node[data-choice='scissors'] {
     left: 100%;
-    top: 0%;
+    top: 35%;
   }
-  .choice-node[data-choice='rock'] {
+
+  .choice-node[data-choice='scissors'] {
     left: 50%;
+    top: -5%;
+  }
+
+  .choice-node[data-choice='rock'] {
+    left: 82%;
     top: 100%;
+  }
+
+  .choice-node[data-choice='lizard'] {
+    left: 15%;
+    top: 100%;
+  }
+
+  .choice-node[data-choice='spock'] {
+    left: 0%;
+    top: 37%;
   }
 
   .disc .inner img {
