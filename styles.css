@@ -296,9 +296,10 @@ main {
 .pick-col {
   grid-area: user;
   text-align: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: 30px;
 }
+
 .pick-col.house {
   grid-area: house;
 }
@@ -673,12 +674,37 @@ main {
   /* ---------- Rules button & modal ---------- */
   .rules-btn {
     position: static;
-    margin: 50px auto 50px;
+    margin: 30px auto 50px;
     width: 100px;
     /* left: 90%; */
     /* right: auto; */
     /* bottom: max(24px, env(safe-area-inset-bottom, 0px)); */
     /* transform: translateX(-50%); */
+  }
+
+  .modal-overlay {
+    padding: 24px 20px 50px;
+  }
+
+  .modal {
+    width: min(100%, 420px);
+    padding: 28px 30px 200px;
+  }
+
+  .modal h2 {
+    margin: 0 0 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .modal-close {
+    bottom: -81%;
+    right: 45%;
+  }
+
+  .rules-diagram img {
+    width: 100%;
+    height: auto;
   }
 
   .pick-col {
@@ -693,9 +719,9 @@ main {
   }
 
   .pick-stage {
-    width: clamp(110px, 40vw, 400px);
-    height: clamp(110px, 40vw, 400px);
-    margin: 22px auto 0;
+    width: clamp(110px, 40vw, 130px);
+    height: clamp(110px, 40vw, 130px);
+    margin: 24px auto 0;
   }
 
   .pick-circle .inner img {
