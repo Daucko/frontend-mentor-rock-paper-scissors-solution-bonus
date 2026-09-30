@@ -93,8 +93,14 @@ function playRound(userChoice) {
       }
       scoreValue.textContent = score;
       verdictCol.classList.add('show', outcome);
-      userStage.classList.add('pulse');
-      houseStage.classList.add('pulse');
+      if (outcome === 'tie') {
+        userStage.classList.add('pulse');
+        houseStage.classList.add('pulse');
+      } else if (outcome === 'win') {
+        userStage.classList.add('pulse');
+      } else {
+        houseStage.classList.add('pulse');
+      }
     }, 550);
   }, 650);
 }

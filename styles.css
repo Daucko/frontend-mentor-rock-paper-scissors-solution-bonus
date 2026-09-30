@@ -1,7 +1,7 @@
 :root {
   --bg-top: #16203a;
   --bg-bottom: #0d1424;
-  --panel-border: rgba(140, 156, 194, 0.35);
+  --panel-border: rgba(162, 176, 211, 0.634);
   --title-color: #8c98b8;
   --score-ink: #232c47;
   --score-label: #4a5fd6;
@@ -462,8 +462,9 @@ main {
   color: var(--score-ink);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 14px;
+  letter-spacing: 2px;
+  font-family: inherit;
+  font-size: 15px;
   padding: 12px 26px;
   border-radius: 6px;
   cursor: pointer;
@@ -486,15 +487,17 @@ main {
   right: max(24px, env(safe-area-inset-right, 0px));
   bottom: max(24px, env(safe-area-inset-bottom, 0px));
   background: transparent;
-  border: 1px solid var(--panel-border);
-  color: #c4cbe0;
+  border: 2px solid var(--panel-border);
+  color: var(--white);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 12px 20px;
-  border-radius: 6px;
+  letter-spacing: 5px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 30px;
+  border-radius: 10px;
   cursor: pointer;
+  width: 134px !important;
 }
 
 .modal-overlay {
@@ -741,6 +744,7 @@ main {
   .play-again {
     padding: 0.9375rem 3.375rem;
     margin-bottom: -50px;
+    font-size: 17px;
   }
 
   .attribution {
