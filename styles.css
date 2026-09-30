@@ -136,8 +136,6 @@ main {
 
 .choices-wrap > img {
   width: 100%;
-  /* border: 1px solid red; */
-  /* margin: 20px auto 0; */
 }
 
 .choices-wrap img.connector {
@@ -296,7 +294,6 @@ main {
 .pick-col {
   grid-area: user;
   text-align: center;
-  /* border: 1px solid red; */
   margin-top: 30px;
 }
 
@@ -625,7 +622,6 @@ main {
     width: min(100%, 210px);
     aspect-ratio: 460 / 380;
     margin: 120px auto 0;
-    border: 1px solid red;
   }
 
   .choices-wrap > img {
